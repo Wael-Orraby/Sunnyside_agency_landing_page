@@ -1,0 +1,210 @@
+:root {font-size: 100%;}
+html {box-sizing: border-box;font-family: 'Fraunces', serif;}
+*, *:before, *:after {box-sizing: inherit;}
+body p{ font-family: 'Barlow', sans-serif;}
+/*-----START HEADER-----*/
+header{
+    background: url(../images/mobile/image-header.jpg) center;
+    background-size: cover;
+    padding: 2rem 1.5rem 25rem;
+    color: white;
+    position: relative;
+}
+header nav {display: flex; justify-content: space-between;}
+header nav .hamburger{width: 2rem; background: url(../images/icon-hamburger.svg) no-repeat;}
+.menuNav{
+    width: 88%;
+    position: absolute;
+    right: 2rem;
+    top: 8rem;
+    display: none;
+}
+.opacity{opacity: 50%;}
+.toon{display: block;}
+.menuNav::before{
+    content: "";
+    border-style: solid;
+    border-width: 2rem;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+}
+header nav .menuNav ul{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    background-color: #fff;
+    font-family: 'Barlow', sans-serif;
+    position: relative;
+    z-index: 1;
+    padding: 2rem 0;
+}
+.menuNav ul li{
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.menuNav ul li a{
+    text-decoration: none;
+    color: #787681;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+}
+.menuNav ul li a:focus{
+    background-color: #fbd601;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    color: black;
+}
+header h1{
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: .5rem;
+    padding:  2rem;
+    position: relative;
+    top: 5rem;
+}
+header h1::after{
+    content: "";
+    background: url(../images/icon-arrow-down.svg) no-repeat;
+    background-size: contain;
+    width: 3rem;
+    height: 8rem;
+    position: absolute;
+    top: 10rem;
+    left: 49%;
+}
+/*-----START MAIN-----*/
+.details{text-align: center; padding: 5rem 2rem;}
+.details h2{font-size: 2.6rem;}
+.details p{
+    margin: 2rem 0; 
+    font-size: 1.45rem;
+    line-height: 2rem;
+    opacity: 50%;
+}
+.details a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.2rem;
+    position: relative;
+}
+.details a::after{
+    content: "";
+    width: 10rem;
+    height: 0.7rem;
+    position: absolute;
+    bottom: -0.3rem;
+    left: -0.75rem;
+    background-color: hsl(51, 100%, 49%);
+    border-radius: 1rem;
+    opacity: 0.2;
+}
+ .details a:hover::after {opacity: 1; z-index: -1;}
+.blok:nth-child(2) .details a::after{background-color: hsl(7, 99%, 70%);}
+.blok-flex .blok:nth-child(1),.blok-flex .blok:nth-child(2){
+    background: url(../images/mobile/image-graphic-design.jpg) center ;
+    background-size: cover;
+    height: 50rem;
+    display: flex;
+    align-items: self-end;
+}
+.blok-flex .blok:nth-child(2){background-image: url(../images/mobile/image-photography.jpg);}
+.clients{padding: 3rem;}
+.clients > h2{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    opacity: 35%;
+    text-align: center;
+    font-weight: 900;
+}
+.client{text-align: center; margin: 4rem 0;}
+.client img{
+    border-radius: 50%;
+    width: 5rem;
+    margin: 2rem 0;
+}
+.client p{
+    line-height: 2rem;
+    font-size: 1.3rem;
+    color: #5c5f63;
+}
+.client h2{
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin: 2rem 0;
+    position: relative;
+}
+.client h2::after{
+    content: "Marketing Director";
+    font-family: 'Barlow', sans-serif;
+    width: 100%;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    color: #bfbeba;
+    font-size: 1rem;
+}
+.client:nth-child(3) h2::after{content: "Chief Operating Officer";}
+.client:nth-child(4) h2::after{content: "Business Owner";}
+.images{display: flex; flex-wrap: wrap;}
+.images img{width: 50%;}
+/*-----START FOOTER-----*/
+footer{
+    background-color: #90d4c5;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+footer > img{filter: invert(1) opacity(0.4); width: 12rem;}
+.menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Barlow', sans-serif;
+    margin: 3rem 0 6rem;
+    color: #478b7c;
+    font-size: 1.2rem;
+}
+footer .menu ul li:hover{color: white; cursor: pointer;}
+.social-media img{margin-right: 1.5rem;}
+.social-media img:hover {filter: brightness(0) invert(1); cursor: pointer;}
+@media(min-width:1440px){
+    header{background-image: url(../images/desktop/image-header.jpg); height: 100vh;}
+    header nav{align-items: center;}
+    header nav .hamburger,.menuNav::before {display: none;}
+    .menuNav {display: block; position: static;}
+    header nav .menuNav ul {
+        display: flex;
+        flex-direction: row; 
+        justify-content: right;
+        background-color:transparent; 
+        padding: 0; 
+    }
+    .menuNav ul li a {color: white;}
+    .menuNav ul li a:focus {background-color: white;}
+    .menuNav ul li a:hover {background-color: rgb(255, 255, 255,.2); color: white;}
+    header h1{top: 11rem;}
+    .blok{display: flex; flex-direction: row-reverse;}
+    .parent .blok img,.parent .blok .details{
+        width: 50%;
+         display: flex;
+         flex-direction:column;
+         justify-content: center;
+         align-items: flex-start;
+        }
+    .parent .blok:nth-child(2){flex-direction: row;}
+    .parent .details{padding: 6rem;}
+    .parent .details h2 {text-align: left;}
+    .parent .details p {text-align: left;}
+    .blok-flex{display: flex;}
+    .blok-flex .blok{width: 82%;}
+    .blok-flex .blok:nth-child(1){background-image: url(../images/desktop/image-graphic-design.jpg);}
+    .blok-flex .blok:nth-child(2){background-image: url(../images/desktop/image-photography.jpg);}
+    .blok-flex .details {padding: 5rem 8rem;}
+    .client-flex{display: flex; justify-content: space-evenly;}
+    .client{width: 26rem;}
+    .images{flex-wrap: nowrap;}
+    footer{padding: 5rem 30rem;}
+}
